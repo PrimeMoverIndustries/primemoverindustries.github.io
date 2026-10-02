@@ -81,7 +81,7 @@
   .feature:nth-of-type(even) { grid-template-columns: 2fr 3fr; }
   .feature:nth-of-type(even) .shot { order: 2; }
   .shot { margin: 0; border: 1px solid #c9a86966; border-radius: 3px; padding: 4px; background: var(--edge); }
-  .shot img { display: block; width: 100%; height: auto; border-radius: 2px; }
+  .shot img, .shot video { display: block; width: 100%; height: auto; border-radius: 2px; }
   .feature h2 { font-family: var(--serif); color: var(--gold-hi); font-size: 30px; margin: 0 0 10px; font-weight: 700; }
   .feature .label { font-family: var(--mono); font-size: 12px; letter-spacing: .25em; text-transform: uppercase; color: var(--gold); }
   .feature p { color: var(--ink); margin: 0; }
@@ -155,7 +155,7 @@
   </section>
 
   <section class="feature">
-    <figure class="shot"><img src="media/map.jpg" alt="The United States in May 1905, the works of a growing company marked across the Northeast." loading="lazy"></figure>
+    <figure class="shot"><video autoplay muted loop playsinline preload="metadata" poster="media/country-seasons-poster.jpg" aria-label="A year on the map in a few seconds: summer, autumn, the winter snow sweeping south and back, with night falling and the towns lighting up every few seconds."><source src="media/country-seasons.mp4" type="video/mp4"></video></figure>
     <div>
       <div class="label">The Country</div>
       <h2>A continent that keeps time</h2>
