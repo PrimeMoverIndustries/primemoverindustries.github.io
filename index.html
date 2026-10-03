@@ -92,6 +92,30 @@
   }
   footer .studio-name { font-family: var(--serif); color: var(--gold-hi); font-size: 20px; display: block; margin-bottom: 6px; }
 
+
+  /* The Titans: painted portraits that take the news, as they do in the game. */
+  .titans { margin: 96px 0 0; text-align: center; }
+  .titans h2 { font-family: var(--serif); color: var(--gold-hi); font-size: clamp(30px, 4vw, 40px); margin: 8px 0 6px; }
+  .titans .lede { max-width: 640px; margin: 0 auto 36px; color: var(--ink-soft); }
+  .titan-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px 22px; text-align: left; }
+  .titan { margin: 0; }
+  .titan button {
+    display: block; width: 100%; padding: 5px; cursor: pointer; position: relative;
+    background: var(--edge); border: 1px solid var(--gold); border-radius: 3px;
+    box-shadow: 0 0 0 3px var(--edge), 0 0 0 4px #c9a86655;
+  }
+  .titan button:focus-visible { outline: 2px solid var(--gold-hi); outline-offset: 4px; }
+  .titan img { display: block; width: 100%; height: auto; aspect-ratio: 1; border-radius: 2px; }
+  .titan .mood {
+    position: absolute; left: 50%; bottom: 10px; transform: translateX(-50%);
+    font-family: var(--mono); font-size: 11px; letter-spacing: .2em; text-transform: uppercase;
+    color: var(--gold-hi); background: #100e0ccc; padding: 2px 8px; border-radius: 2px; white-space: nowrap;
+  }
+  .titan .role { font-family: var(--mono); font-size: 11px; letter-spacing: .22em; text-transform: uppercase; color: var(--gold); margin: 14px 0 2px; }
+  .titan .name { font-family: var(--serif); color: var(--gold-hi); font-size: 20px; line-height: 1.25; margin: 0; }
+  .titan .years { font-family: var(--mono); font-size: 12px; color: var(--ink-soft); margin: 2px 0 6px; }
+  .titan p.bio { font-size: 15px; line-height: 1.5; margin: 0; color: var(--ink); }
+  @media (max-width: 900px) { .titan-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 760px) {
     body { font-size: 16px; }
     .feature, .feature:nth-of-type(even) { grid-template-columns: 1fr; gap: 16px; margin: 48px 0; }
@@ -171,11 +195,119 @@
     </div>
   </section>
 
+  <section class="titans">
+    <div class="kicker">The Titans</div>
+    <h2>They have tempers, and memories</h2>
+    <p class="lede">Fifteen figures of the age, each painted for the game in every mood your dealings can put them in. Hover to please them; tap to see the rest.</p>
+    <div class="titan-grid">
+      <figure class="titan" data-id="nikola_tesla" data-moods="pleased guarded anxious angry">
+        <button type="button" aria-label="Nikola Tesla: change his mood">
+          <img src="media/titans/nikola_tesla_neutral.jpg" alt="Portrait of Nikola Tesla" loading="lazy" width="360" height="360">
+          <span class="mood" hidden></span>
+        </button>
+        <div class="role">The Inventor</div>
+        <h3 class="name">Nikola Tesla</h3>
+        <div class="years">1856–1943</div>
+        <p class="bio">The rotating magnetic field and the polyphase system, licensed to Westinghouse.</p>
+      </figure>
+      <figure class="titan" data-id="thomas_edison" data-moods="pleased guarded anxious angry">
+        <button type="button" aria-label="Thomas Edison: change his mood">
+          <img src="media/titans/thomas_edison_neutral.jpg" alt="Portrait of Thomas Edison" loading="lazy" width="360" height="360">
+          <span class="mood" hidden></span>
+        </button>
+        <div class="role">The Wizard of Menlo Park</div>
+        <h3 class="name">Thomas Edison</h3>
+        <div class="years">1847–1931</div>
+        <p class="bio">The Menlo Park laboratory, the incandescent lamp, and the first central station in New York.</p>
+      </figure>
+      <figure class="titan" data-id="george_westinghouse" data-moods="pleased guarded anxious angry">
+        <button type="button" aria-label="George Westinghouse: change his mood">
+          <img src="media/titans/george_westinghouse_neutral.jpg" alt="Portrait of George Westinghouse" loading="lazy" width="360" height="360">
+          <span class="mood" hidden></span>
+        </button>
+        <div class="role">The Engineer</div>
+        <h3 class="name">George Westinghouse</h3>
+        <div class="years">1846–1914</div>
+        <p class="bio">The air brake, then alternating current, and a quarrel with Edison about which current is safe.</p>
+      </figure>
+      <figure class="titan" data-id="jp_morgan" data-moods="pleased guarded anxious angry">
+        <button type="button" aria-label="J. P. Morgan: change his mood">
+          <img src="media/titans/jp_morgan_neutral.jpg" alt="Portrait of J. P. Morgan" loading="lazy" width="360" height="360">
+          <span class="mood" hidden></span>
+        </button>
+        <div class="role">The Banker</div>
+        <h3 class="name">J. P. Morgan</h3>
+        <div class="years">1837–1913</div>
+        <p class="bio">The banker who reorganises railways, and whose word settles terms on Wall Street.</p>
+      </figure>
+      <figure class="titan" data-id="john_rockefeller" data-moods="laughing pleased guarded scared furious">
+        <button type="button" aria-label="John D. Rockefeller: change his mood">
+          <img src="media/titans/john_rockefeller_neutral.jpg" alt="Portrait of John D. Rockefeller" loading="lazy" width="360" height="360">
+          <span class="mood" hidden></span>
+        </button>
+        <div class="role">The Oilman</div>
+        <h3 class="name">John D. Rockefeller</h3>
+        <div class="years">1839–1937</div>
+        <p class="bio">Standard Oil: refining, then the pipelines, then the rebates, then everybody else’s refineries.</p>
+      </figure>
+      <figure class="titan" data-id="andrew_carnegie" data-moods="pleased guarded anxious angry">
+        <button type="button" aria-label="Andrew Carnegie: change his mood">
+          <img src="media/titans/andrew_carnegie_neutral.jpg" alt="Portrait of Andrew Carnegie" loading="lazy" width="360" height="360">
+          <span class="mood" hidden></span>
+        </button>
+        <div class="role">The Steelmaker</div>
+        <h3 class="name">Andrew Carnegie</h3>
+        <div class="years">1835–1919</div>
+        <p class="bio">Bessemer steel at Pittsburgh, and the hard bargain that made it cheap.</p>
+      </figure>
+      <figure class="titan" data-id="henry_ford" data-moods="pleased guarded anxious angry">
+        <button type="button" aria-label="Henry Ford: change his mood">
+          <img src="media/titans/henry_ford_neutral.jpg" alt="Portrait of Henry Ford" loading="lazy" width="360" height="360">
+          <span class="mood" hidden></span>
+        </button>
+        <div class="role">The Machinist</div>
+        <h3 class="name">Henry Ford</h3>
+        <div class="years">1863–1947</div>
+        <p class="bio">A machinist from a Dearborn farm, with a taste for engines.</p>
+      </figure>
+      <figure class="titan" data-id="harlan_voss" data-moods="pleased guarded anxious angry">
+        <button type="button" aria-label="Harlan Voss: change his mood">
+          <img src="media/titans/harlan_voss_neutral.jpg" alt="Portrait of Harlan Voss" loading="lazy" width="360" height="360">
+          <span class="mood" hidden></span>
+        </button>
+        <div class="role">The Lender</div>
+        <h3 class="name">Harlan Voss</h3>
+        <div class="years">1848–1921</div>
+        <p class="bio">A Chicago lender who lends fast, asks less, and remembers everything.</p>
+      </figure>
+    </div>
+  </section>
+
   <footer>
     <span class="studio-name">Prime Mover Industries</span>
     An independent studio · <a href="mailto:hello@primemoverindustries.com">hello@primemoverindustries.com</a><br>
     © 2026 Prime Mover Industries. Titans of Progress is in development; footage and screens are from the current build.
   </footer>
 </div>
+<script>
+  // Hover pleases a titan; a tap or a key walks him through his moods. The mood pictures are the game's own.
+  document.querySelectorAll('.titan').forEach(card => {
+    const id = card.dataset.id, moods = card.dataset.moods.split(' ');
+    const img = card.querySelector('img'), tag = card.querySelector('.mood');
+    let at = -1, touched = false;
+    const show = i => {
+      at = i;
+      img.src = 'media/titans/' + id + '_' + (i < 0 ? 'neutral' : moods[i]) + '.jpg';
+      tag.hidden = i < 0; tag.textContent = i < 0 ? '' : moods[i];
+    };
+    const btn = card.querySelector('button');
+    btn.addEventListener('mouseenter', () => { if (!touched && at < 0) show(0); });
+    btn.addEventListener('mouseleave', () => { if (!touched) show(-1); });
+    btn.addEventListener('click', () => { touched = true; show(at + 1 < moods.length ? at + 1 : -1); });
+    // Fetch his other faces once the page is idle, so the first change is not a blank.
+    const warm = () => moods.forEach(m => { const p = new Image(); p.src = 'media/titans/' + id + '_' + m + '.jpg'; });
+    ('requestIdleCallback' in window) ? requestIdleCallback(warm) : setTimeout(warm, 1500);
+  });
+</script>
 </body>
 </html>
