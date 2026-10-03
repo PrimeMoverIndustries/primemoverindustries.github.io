@@ -115,6 +115,24 @@
   .titan .name { font-family: var(--serif); color: var(--gold-hi); font-size: 20px; line-height: 1.25; margin: 0; }
   .titan .years { font-family: var(--mono); font-size: 12px; color: var(--ink-soft); margin: 2px 0 6px; }
   .titan p.bio { font-size: 15px; line-height: 1.5; margin: 0; color: var(--ink); }
+  /* The eras: the case refitted as the century turns, and the Exchange's chart with it. */
+  .times { margin: 96px 0 0; text-align: center; }
+  .times h2 { font-family: var(--serif); color: var(--gold-hi); font-size: clamp(30px, 4vw, 40px); margin: 8px 0 6px; }
+  .times .lede { max-width: 680px; margin: 0 auto 28px; color: var(--ink-soft); }
+  .era-tabs { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin: 0 0 18px; }
+  .era-tabs button {
+    font-family: var(--mono); font-size: 14px; letter-spacing: .14em; color: var(--gold);
+    background: transparent; border: 1px solid #c9a86966; border-radius: 3px; padding: 8px 16px; cursor: pointer;
+  }
+  .era-tabs button[aria-selected="true"] { color: var(--edge); background: var(--gold); border-color: var(--gold); }
+  .era-tabs button:focus-visible { outline: 2px solid var(--gold-hi); outline-offset: 3px; }
+  .era-stage { position: relative; margin: 0 auto; max-width: min(1000px, calc((100vh - 150px) * 1.16)); aspect-ratio: 1000 / 862; border: 1px solid #c9a86966; border-radius: 3px; padding: 4px; background: var(--edge); box-shadow: 0 24px 60px #000a; }
+  .era-stage img { position: absolute; inset: 4px; width: calc(100% - 8px); height: calc(100% - 8px); border-radius: 2px; opacity: 0; transition: opacity .6s ease; }
+  .era-stage img.on { opacity: 1; }
+  .era-caption { max-width: 640px; margin: 16px auto 0; min-height: 3.2em; color: var(--ink); font-size: 16px; }
+  .era-caption b { font-family: var(--serif); color: var(--gold-hi); font-weight: 700; }
+  @media (prefers-reduced-motion: reduce) { .era-stage img { transition: none; } }
+
   @media (max-width: 900px) { .titan-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 760px) {
     body { font-size: 16px; }
@@ -193,6 +211,25 @@
       <h2>The Courier is watching</h2>
       <p>The New-York Courier reports what you did and what the country made of it, from the founding to the crashes and the wars.</p>
     </div>
+  </section>
+
+  <section class="times" aria-labelledby="times-title">
+    <div class="kicker">The Eras</div>
+    <h2 id="times-title">The game changes with the times</h2>
+    <p class="lede">The office you run your company from is refitted as the century turns: khaki when the Great War reaches the papers, prussian blue after the armistice, olive drab for the second war, phosphor green in the fifties. The Exchange's chart changes with it, from a brass integrator to a pen on a cord, an oscilloscope's beam, and at last the terminal's red and green candles.</p>
+    <div class="era-tabs" role="tablist" aria-label="Eras">
+      <button role="tab" id="era-tab-1913" aria-controls="era-stage" aria-selected="true" data-era="0">1913</button>
+      <button role="tab" id="era-tab-1938" aria-controls="era-stage" aria-selected="false" data-era="1" tabindex="-1">1938</button>
+      <button role="tab" id="era-tab-1950" aria-controls="era-stage" aria-selected="false" data-era="2" tabindex="-1">1950</button>
+      <button role="tab" id="era-tab-1992" aria-controls="era-stage" aria-selected="false" data-era="3" tabindex="-1">1992</button>
+    </div>
+    <div class="era-stage" id="era-stage" role="tabpanel" aria-live="polite">
+      <img class="on" src="media/eras/exchange-1913.jpg" alt="The Exchange in 1913: Bethlehem Steel's year drawn by a brass rack, a steel drum and a ball-and-disc integrator, in a case of blackened iron and gilt.">
+      <img src="media/eras/exchange-1938.jpg" alt="The Exchange in 1938: Radio Corporation of America's price written by a pen clamped to a cord over two red pulleys, in an olive-drab case." loading="lazy">
+      <img src="media/eras/exchange-1950.jpg" alt="The Exchange in 1950: Standard Oil of New Jersey as a green phosphor trace on an oscilloscope, with time-base and dollars-per-division knobs." loading="lazy">
+      <img src="media/eras/exchange-1992.jpg" alt="The Exchange in 1992: Union Pacific as weekly red and green candles on a trading terminal, the last price tagged on the axis." loading="lazy">
+    </div>
+    <p class="era-caption" id="era-caption"></p>
   </section>
 
   <section class="titans">
@@ -290,6 +327,41 @@
   </footer>
 </div>
 <script>
+  // The eras: a tab shows one; until a visitor picks, they turn over on their own, unless motion is reduced.
+  (() => {
+    const captions = [
+      '<b>1913, the Drawing Office.</b> Blackened iron and gilt, and a brass rack and integrator that drive the pen as the price moves.',
+      '<b>1938, the War Office.</b> Olive drab, and a pen on a cord: the pulleys turn as the price moves.',
+      '<b>1950, the Console.</b> Phosphor on dark glass. The beam glides to each day’s close and the trace fades behind it.',
+      '<b>1992, the terminal.</b> Red and green candles, the last price on the axis, and the line if you prefer it.',
+    ];
+    const tabs = [...document.querySelectorAll('.era-tabs button')];
+    const shots = [...document.querySelectorAll('.era-stage img')];
+    const caption = document.getElementById('era-caption');
+    let at = 0, timer = null;
+    const show = i => {
+      at = i;
+      tabs.forEach((t, k) => { t.setAttribute('aria-selected', k === i); t.tabIndex = k === i ? 0 : -1; });
+      shots.forEach((img, k) => img.classList.toggle('on', k === i));
+      caption.innerHTML = captions[i];
+    };
+    const stop = () => { clearInterval(timer); timer = null; };
+    tabs.forEach((t, i) => {
+      t.addEventListener('click', () => { stop(); show(i); });
+      t.addEventListener('keydown', e => {
+        const step = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+        if (step) { stop(); const n = (at + step + tabs.length) % tabs.length; show(n); tabs[n].focus(); e.preventDefault(); }
+      });
+    });
+    show(0);
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const stage = document.getElementById('era-stage');
+      new IntersectionObserver((seen, watcher) => {
+        if (seen.some(x => x.isIntersecting)) { watcher.disconnect(); timer = setInterval(() => show((at + 1) % tabs.length), 4500); }
+      }, { threshold: 0.4 }).observe(stage);
+    }
+  })();
+
   // Hover pleases a titan; a tap or a key walks him through his moods. The mood pictures are the game's own.
   document.querySelectorAll('.titan').forEach(card => {
     const id = card.dataset.id, moods = card.dataset.moods.split(' ');
