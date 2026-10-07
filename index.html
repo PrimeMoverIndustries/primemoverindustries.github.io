@@ -3,18 +3,90 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Titans of Progress — Prime Mover Industries</title>
-<meta name="description" content="Titans of Progress: Grand strategy meets industrial tycoon. Found an electrical company in 1890 and invent, build, trade and litigate your way through an alternate history of American industry. Can you own the century before Edison, Westinghouse and Morgan do? Coming soon to Steam Early Access.">
+<!-- The title carries the owner's own genre line, so a search for either term finds the name beside it. -->
+<title>Titans of Progress — Grand strategy meets industrial tycoon</title>
+<!-- The owner's short description (docs/store/STORE-PAGE.md §2), its first two sentences only: a search result shows
+     about 160 characters, and the question would be cut mid-word. The whole text is the og:description and the pitch. -->
+<meta name="description" content="Grand strategy meets industrial tycoon. Found an electrical company in 1890 and invent, build, trade and litigate your way through an alternate history of American industry.">
+<link rel="canonical" href="https://primemoverindustries.com/">
+<meta name="theme-color" content="#2e2b27">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Prime Mover Industries">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://primemoverindustries.com/">
 <meta property="og:title" content="Titans of Progress">
 <meta property="og:description" content="Grand strategy meets industrial tycoon. Found an electrical company in 1890 and invent, build, trade and litigate your way through an alternate history of American industry. Can you own the century before Edison, Westinghouse and Morgan do?">
-<meta property="og:image" content="https://primemoverindustries.com/media/map.jpg">
-<meta property="og:url" content="https://primemoverindustries.com/">
-<meta property="og:type" content="website">
+<meta property="og:image" content="https://primemoverindustries.com/media/share-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Titans of Progress: a grand strategy of American industry. The Big Board, 1908: United States Steel's year drawn by a brass integrator through the Panic of 1907.">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='6' fill='%232e2b27'/%3E%3Crect x='4' y='4' width='56' height='56' rx='4' fill='none' stroke='%23c9a869' stroke-width='2'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='28' font-weight='bold' fill='%23f0d79a' text-anchor='middle'%3EPM%3C/text%3E%3C/svg%3E">
+<meta name="twitter:title" content="Titans of Progress">
+<meta name="twitter:description" content="Grand strategy meets industrial tycoon. Found an electrical company in 1890 and own the century before Edison, Westinghouse and Morgan do.">
+<meta name="twitter:image" content="https://primemoverindustries.com/media/share-card.jpg">
+<meta name="twitter:image:alt" content="Titans of Progress: a grand strategy of American industry.">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" as="image" href="media/field-trial-poster.jpg" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&family=Inter:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- What a search engine reads about the game and the studio. No price and no date until Steam has them: a figure
+     here that the store later contradicts is worse than none. Add the Steam page and any social profiles to sameAs
+     the day they exist. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://primemoverindustries.com/#studio",
+      "name": "Prime Mover Industries",
+      "url": "https://primemoverindustries.com/",
+      "logo": "https://primemoverindustries.com/icon-192.png",
+      "email": "hello@primemoverindustries.com"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://primemoverindustries.com/#site",
+      "name": "Prime Mover Industries",
+      "alternateName": "Titans of Progress",
+      "url": "https://primemoverindustries.com/",
+      "publisher": { "@id": "https://primemoverindustries.com/#studio" }
+    },
+    {
+      "@type": "VideoGame",
+      "@id": "https://primemoverindustries.com/#game",
+      "name": "Titans of Progress",
+      "url": "https://primemoverindustries.com/",
+      "description": "Grand strategy meets industrial tycoon. Found an electrical company in 1890 and invent, build, trade and litigate your way through an alternate history of American industry. Can you own the century before Edison, Westinghouse and Morgan do?",
+      "genre": ["Economic strategy", "Grand strategy", "Business simulation", "Tycoon", "Historical"],
+      "gamePlatform": "PC",
+      "operatingSystem": "Windows 10, Windows 11",
+      "applicationCategory": "Game",
+      "playMode": ["SinglePlayer", "MultiPlayer"],
+      "inLanguage": "en",
+      "author": { "@id": "https://primemoverindustries.com/#studio" },
+      "publisher": { "@id": "https://primemoverindustries.com/#studio" },
+      "image": [
+        "https://primemoverindustries.com/media/share-card.jpg",
+        "https://primemoverindustries.com/media/laboratory.jpg",
+        "https://primemoverindustries.com/media/drawing-office.jpg",
+        "https://primemoverindustries.com/media/exchange-1908.jpg"
+      ],
+      "trailer": {
+        "@type": "VideoObject",
+        "name": "A field trial at the proving ground",
+        "description": "In-game footage of Titans of Progress: at the proving ground in January 1890 a gloved hand throws the knife switch, the incandescent lamp lights, and the claim is stamped IT WORKS.",
+        "thumbnailUrl": "https://primemoverindustries.com/media/field-trial-poster.jpg",
+        "contentUrl": "https://primemoverindustries.com/media/field-trial.mp4",
+        "uploadDate": "2026-10-03"
+      }
+    }
+  ]
+}
+</script>
 <style>
   /* The game's own palette: The Instrument Case (tools/mockup/hud.css). Blackened iron, gilt, one oxblood control. */
   :root {
@@ -47,6 +119,8 @@
     font-family: var(--mono); font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold);
   }
   header.studio a { color: var(--gold); text-decoration: none; }
+  header.studio nav { display: flex; gap: 22px; }
+  header.studio a:hover, header.studio a:focus-visible { color: var(--gold-hi); }
 
   .hero { text-align: center; padding: 56px 0 24px; }
   .kicker { font-family: var(--mono); font-size: 13px; letter-spacing: .3em; text-transform: uppercase; color: var(--gold); }
@@ -61,7 +135,7 @@
     margin: 36px auto 0; border: 1px solid var(--gold); border-radius: 4px; padding: 6px;
     background: var(--edge); box-shadow: 0 24px 60px #000a;
   }
-  .film video { display: block; width: 100%; height: auto; border-radius: 2px; }
+  .film video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border-radius: 2px; }
   .film figcaption { font-family: var(--mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-soft); padding: 8px 4px 2px; text-align: left; }
 
   .cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin: 32px 0 8px; }
@@ -72,31 +146,35 @@
   .button.primary { background: var(--wax); border-color: var(--wax-hi); color: var(--ink); }
   .button.primary[aria-disabled="true"] { cursor: default; }
   .button.secondary { color: var(--gold-hi); background: transparent; }
+  .button.secondary:hover, .button.secondary:focus-visible { background: #c9a86618; }
   .soon { font-family: var(--mono); font-size: 13px; color: var(--ink-soft); text-align: center; margin: 0; }
 
   .pitch { max-width: 720px; margin: 64px auto; font-family: var(--serif); font-size: 21px; line-height: 1.65; text-align: center; }
   .pitch p { margin: 0 0 1em; }
 
+  /* Alternation is by class, not :nth-of-type: the Titans and the eras sit between features and would flip the count. */
   .feature { display: grid; grid-template-columns: 3fr 2fr; gap: 36px; align-items: center; margin: 72px 0; }
-  .feature:nth-of-type(even) { grid-template-columns: 2fr 3fr; }
-  .feature:nth-of-type(even) .shot { order: 2; }
+  .feature.flip { grid-template-columns: 2fr 3fr; }
+  .feature.flip .shot { order: 2; }
   .shot { margin: 0; border: 1px solid #c9a86966; border-radius: 3px; padding: 4px; background: var(--edge); }
   .shot img, .shot video { display: block; width: 100%; height: auto; border-radius: 2px; }
-  .feature h2 { font-family: var(--serif); color: var(--gold-hi); font-size: 30px; margin: 0 0 10px; font-weight: 700; }
+  .feature h2 { font-family: var(--serif); color: var(--gold-hi); font-size: 30px; margin: 0 0 10px; font-weight: 700; line-height: 1.25; }
   .feature .label { font-family: var(--mono); font-size: 12px; letter-spacing: .25em; text-transform: uppercase; color: var(--gold); }
-  .feature p { color: var(--ink); margin: 0; }
+  .feature p { color: var(--ink); margin: 0 0 .8em; }
+  .feature p:last-child { margin-bottom: 0; }
 
   footer {
     margin-top: 96px; padding: 32px 0 48px; border-top: 1px solid #ffffff14;
     color: var(--ink-soft); font-size: 14px; text-align: center;
   }
   footer .studio-name { font-family: var(--serif); color: var(--gold-hi); font-size: 20px; display: block; margin-bottom: 6px; }
-
+  footer nav { margin: 0 0 10px; font-family: var(--mono); font-size: 12px; letter-spacing: .18em; text-transform: uppercase; }
+  footer nav a { color: var(--gold); text-decoration: none; margin: 0 10px; }
 
   /* The Titans: painted portraits that take the news, as they do in the game. */
-  .titans { margin: 96px 0 0; text-align: center; }
+  .titans { margin: 96px 0; text-align: center; }
   .titans h2 { font-family: var(--serif); color: var(--gold-hi); font-size: clamp(30px, 4vw, 40px); margin: 8px 0 6px; }
-  .titans .lede { max-width: 640px; margin: 0 auto 36px; color: var(--ink-soft); }
+  .titans .lede { max-width: 680px; margin: 0 auto 36px; color: var(--ink-soft); }
   .titan-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px 22px; text-align: left; }
   .titan { margin: 0; }
   .titan button {
@@ -133,24 +211,38 @@
   .era-caption b { font-family: var(--serif); color: var(--gold-hi); font-weight: 700; }
   @media (prefers-reduced-motion: reduce) { .era-stage img { transition: none; } }
 
+  /* Questions: what a searcher asks about a game before it has a store page, answered in the page's own voice. */
+  .questions { margin: 96px auto 0; max-width: 760px; }
+  .questions > h2 { font-family: var(--serif); color: var(--gold-hi); font-size: clamp(30px, 4vw, 40px); margin: 8px 0 28px; text-align: center; }
+  .questions .kicker { text-align: center; }
+  .questions h3 { font-family: var(--serif); color: var(--gold-hi); font-size: 21px; margin: 28px 0 6px; font-weight: 700; }
+  .questions p { margin: 0; }
+
   @media (max-width: 900px) { .titan-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 760px) {
     body { font-size: 16px; }
-    .feature, .feature:nth-of-type(even) { grid-template-columns: 1fr; gap: 16px; margin: 48px 0; }
-    .feature:nth-of-type(even) .shot { order: 0; }
+    .feature, .feature.flip { grid-template-columns: 1fr; gap: 16px; margin: 48px 0; }
+    .feature.flip .shot { order: 0; }
     .pitch { font-size: 18px; margin: 44px auto; }
     header.studio { font-size: 11px; letter-spacing: .12em; }
+    header.studio nav { gap: 14px; }
   }
+  @media (max-width: 420px) { header.studio .home { display: none; } }
   @media (prefers-reduced-motion: reduce) { .film video { display: none; } .film .still { display: block !important; } }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header class="studio">
-    <a href="/">Prime Mover Industries</a>
-    <a href="mailto:hello@primemoverindustries.com">Contact</a>
+    <a class="home" href="/">Prime Mover Industries</a>
+    <nav aria-label="Site">
+      <a href="#questions">Questions</a>
+      <a href="/press/">Press</a>
+      <a href="mailto:hello@primemoverindustries.com">Contact</a>
+    </nav>
   </header>
 
+  <main>
   <section class="hero">
     <div class="kicker">A grand strategy of American industry</div>
     <h1>Titans of Progress</h1>
@@ -158,84 +250,68 @@
     <p class="tagline">New York, January 1890. Five million dollars, and nobody on the payroll.</p>
 
     <figure class="film">
-      <video autoplay muted loop playsinline preload="metadata" poster="media/field-trial-poster.jpg">
+      <video autoplay muted loop playsinline preload="metadata" poster="media/field-trial-poster.jpg" width="1600" height="900" aria-label="A field trial at the proving ground, January 1890: a gloved hand throws the knife switch, the incandescent lamp lights on the bench, and the claim is stamped IT WORKS.">
         <source src="media/field-trial.mp4" type="video/mp4">
       </video>
-      <img class="still" src="media/field-trial-poster.jpg" alt="A field trial: engineers in silhouette watch an incandescent lamp light, and the claim is stamped IT WORKS." style="display:none;width:100%">
+      <img class="still" src="media/field-trial-poster.jpg" alt="A field trial: the incandescent lamp lit on the bench at the proving ground." width="1600" height="900" style="display:none;width:100%;height:auto">
       <figcaption>A field trial at the proving ground · in-game footage</figcaption>
     </figure>
 
     <div class="cta">
-      <!-- The Steam page goes here the day it is public: replace the href and drop aria-disabled. -->
+      <!-- The Steam page goes here the day it is public: replace the href (with ?utm_source=website so Steam's
+           UTM report counts this button), drop aria-disabled and the title, and add the Steam URL to the JSON-LD's sameAs. -->
       <a class="button primary" href="#" aria-disabled="true" title="The Steam page is on its way">Wishlist on Steam</a>
-      <a class="button secondary" href="mailto:hello@primemoverindustries.com">Write to us</a>
+      <!-- Until then the page's one way to keep a visitor: a letter, answered once, the day the Steam page opens. -->
+      <a class="button secondary" href="mailto:hello@primemoverindustries.com?subject=Tell%20me%20when%20Titans%20of%20Progress%20is%20on%20Steam&amp;body=Write%20to%20me%20once%2C%20the%20day%20the%20Steam%20page%20opens.">Tell me when it’s on Steam</a>
     </div>
-    <p class="soon">Coming soon to Steam Early Access</p>
+    <p class="soon">Coming soon to Steam Early Access · Windows</p>
   </section>
 
   <section class="pitch">
     <p>Grand strategy meets industrial tycoon. Found an electrical company in 1890 and invent, build, trade and litigate your way through an alternate history of American industry. Can you own the century before Edison, Westinghouse and Morgan do?</p>
   </section>
 
+  <!-- The features follow the pitch's own verbs: invent, build, trade, litigate; then the century they happen in. -->
   <section class="feature">
-    <figure class="shot"><img src="media/laboratory.jpg" alt="The laboratory: the electrical tree from induction and alternating current to the turbo-generator and the storage battery." loading="lazy"></figure>
+    <figure class="shot"><img src="media/laboratory.jpg" alt="The laboratory: the electrical tree from induction and alternating current to the turbo-generator and the storage battery." loading="lazy" width="1920" height="1080"></figure>
     <div>
       <div class="label">The Laboratory</div>
       <h2>Seven fields, from the dynamo onward</h2>
-      <p>Electrical, electronics, materials, chemical, manufacturing, transport and computing. Every claim is tried in the field, with money and engineers at stake, and a failure costs both.</p>
+      <p>More than three hundred technologies across electrical, electronics, materials, chemical, manufacturing, transport and computing. Nothing is a progress bar. Every claim is tried in the field, with money and engineers at stake, and a failure costs both.</p>
+    </div>
+  </section>
+
+  <section class="feature flip">
+    <figure class="shot"><img src="media/patent-desk.jpg" alt="The Patent Desk: a dynamo's patent drawing with its witnesses' signatures, an envelope, two-cent stamps, an ink pad and a rubber stamp, and a brass chute to Washington." loading="lazy" width="1384" height="794"></figure>
+    <div>
+      <div class="label">The Patent Desk</div>
+      <h2>Carry it to Washington before a rival does</h2>
+      <p>A claim proved in the field is only yours once the Patent Office says so. Ink the stamp, seal the envelope and send it down the chute yourself, until you can pay a clerk to do it. A careful hand fares a little better at the first examination.</p>
     </div>
   </section>
 
   <section class="feature">
-    <figure class="shot"><video autoplay muted loop playsinline preload="metadata" poster="media/exchange-poster.jpg" aria-label="The Big Board at full speed, May to November 1905: prices ticking down the list and a year's chart of United States Steel scrolling as the stock rises and falls."><source src="media/exchange.mp4" type="video/mp4"></video></figure>
+    <figure class="shot"><img src="media/drawing-office.jpg" alt="The Drawing Office, 1897: a steam locomotive designed part by part, its driving wheels chosen on a blueprint, with tractive effort, top speed and unit cost on the sheet beside it." loading="lazy" width="1920" height="1080"></figure>
+    <div>
+      <div class="label">The Drawing Office</div>
+      <h2>The figures on the drawing are the figures on your books</h2>
+      <p>Design what you build, part by part: power lines, power stations, locomotives, motor cars, airships, airliners and ships. Tractive effort against top speed, conductor weight against tower spacing, and every choice priced on the sheet.</p>
+    </div>
+  </section>
+
+  <section class="feature flip">
+    <figure class="shot"><video autoplay muted loop playsinline preload="metadata" poster="media/exchange-poster.jpg" width="1280" height="708" aria-label="The Big Board at full speed, May to November 1905: prices ticking down the list and a year's chart of United States Steel scrolling as the stock rises and falls."><source src="media/exchange.mp4" type="video/mp4"></video></figure>
     <div>
       <div class="label">The Big Board</div>
       <h2>Quoted in eighths, as it was</h2>
-      <p>Buy into the railroads and the trusts, watch a panic take them down, and take your own company public when the country is ready to believe in it.</p>
+      <p>Twenty-six concerns on the New York exchange. Buy into the railroads and the trusts, watch a panic take them down, and take your own company public when the country is ready to believe in it.</p>
     </div>
-  </section>
-
-  <section class="feature">
-    <figure class="shot"><video autoplay muted loop playsinline preload="metadata" poster="media/country-seasons-poster.jpg" aria-label="A year on the map in a few seconds: summer, autumn, the winter snow sweeping south and back, with night falling and the towns lighting up every few seconds."><source src="media/country-seasons.mp4" type="video/mp4"></video></figure>
-    <div>
-      <div class="label">The Country</div>
-      <h2>A continent that keeps time</h2>
-      <p>Seasons turn, towns grow with the census, and the lights come on where the wires reach. Buy land where it is cheap or build where the capital is, and pay for the difference.</p>
-    </div>
-  </section>
-
-  <section class="feature">
-    <figure class="shot"><img src="media/dispatch.jpg" alt="The New-York Courier, 1 January 1890: Local businessman invests $5,000,000 to found his company." loading="lazy"></figure>
-    <div>
-      <div class="label">The Papers</div>
-      <h2>The Courier is watching</h2>
-      <p>The New-York Courier reports what you did and what the country made of it, from the founding to the crashes and the wars.</p>
-    </div>
-  </section>
-
-  <section class="times" aria-labelledby="times-title">
-    <div class="kicker">The Eras</div>
-    <h2 id="times-title">The game changes with the times</h2>
-    <p class="lede">The office you run your company from is refitted as the century turns: khaki when the Great War reaches the papers, prussian blue after the armistice, olive drab for the second war, phosphor green in the fifties. The Exchange's chart changes with it, from a brass integrator to a pen on a cord, an oscilloscope's beam, and at last the terminal's red and green candles.</p>
-    <div class="era-tabs" role="tablist" aria-label="Eras">
-      <button role="tab" id="era-tab-1913" aria-controls="era-stage" aria-selected="true" data-era="0">1913</button>
-      <button role="tab" id="era-tab-1938" aria-controls="era-stage" aria-selected="false" data-era="1" tabindex="-1">1938</button>
-      <button role="tab" id="era-tab-1950" aria-controls="era-stage" aria-selected="false" data-era="2" tabindex="-1">1950</button>
-      <button role="tab" id="era-tab-1992" aria-controls="era-stage" aria-selected="false" data-era="3" tabindex="-1">1992</button>
-    </div>
-    <div class="era-stage" id="era-stage" role="tabpanel" aria-live="polite">
-      <img class="on" src="media/eras/exchange-1913.jpg" alt="The Exchange in 1913: Bethlehem Steel's year drawn by a brass rack, a steel drum and a ball-and-disc integrator, in a case of blackened iron and gilt.">
-      <img src="media/eras/exchange-1938.jpg" alt="The Exchange in 1938: Radio Corporation of America's price written by a pen clamped to a cord over two red pulleys, in an olive-drab case." loading="lazy">
-      <img src="media/eras/exchange-1950.jpg" alt="The Exchange in 1950: Standard Oil of New Jersey as a green phosphor trace on an oscilloscope, with time-base and dollars-per-division knobs." loading="lazy">
-      <img src="media/eras/exchange-1992.jpg" alt="The Exchange in 1992: Union Pacific as weekly red and green candles on a trading terminal, the last price tagged on the axis." loading="lazy">
-    </div>
-    <p class="era-caption" id="era-caption"></p>
   </section>
 
   <section class="titans">
     <div class="kicker">The Titans</div>
     <h2>They have tempers, and memories</h2>
-    <p class="lede">Fifteen figures of the age, each painted for the game in every mood your dealings can put them in. Hover to please them; tap to see the rest.</p>
+    <p class="lede">The House of Morgan, Standard Oil, Edison, Westinghouse, Carnegie, the Patent Office and the Federal Government remember how you dealt with them, and some would rather beat you in court than in the market. Fifteen figures of the age are painted for the game in every mood your dealings can put them in. Hover to please them; tap to see the rest.</p>
     <div class="titan-grid">
       <figure class="titan" data-id="nikola_tesla" data-moods="pleased guarded anxious angry">
         <button type="button" aria-label="Nikola Tesla: change his mood">
@@ -320,10 +396,78 @@
     </div>
   </section>
 
+  <section class="feature">
+    <figure class="shot"><img src="media/courier.jpg" alt="The New-York Courier, 1 August 1892: The Barges at Homestead, with portraits of Henry Clay Frick and Andrew Carnegie clipped beside the column." loading="lazy" width="890" height="624"></figure>
+    <div>
+      <div class="label">The Papers</div>
+      <h2>A century, with choices in it</h2>
+      <p>The New-York Courier reports what you did and what the country made of it, with a story every year from 1890 to 2040, and the wireless and television join it as they arrive. Click a name in the column and follow the person out of the news.</p>
+      <p>Work with Mr. Tesla or stay with the Establishment. Cast your vote in 1896, and answer the government’s letter when the wars come.</p>
+    </div>
+  </section>
+
+  <section class="feature flip">
+    <figure class="shot"><video autoplay muted loop playsinline preload="metadata" poster="media/country-seasons-poster.jpg" width="1280" height="658" aria-label="A year on the map in a few seconds: summer, autumn, the winter snow sweeping south and back, with night falling and the towns lighting up every few seconds."><source src="media/country-seasons.mp4" type="video/mp4"></video></figure>
+    <div>
+      <div class="label">The Country</div>
+      <h2>A continent that keeps time</h2>
+      <p>The United States, built from NASA’s own imagery and elevation data. Seasons turn, towns grow with the census, and the lights come on where the wires reach. Buy land where it is cheap or build where the capital is, and pay for the difference.</p>
+    </div>
+  </section>
+
+  <section class="times" aria-labelledby="times-title">
+    <div class="kicker">The Eras</div>
+    <h2 id="times-title">The game changes with the times</h2>
+    <p class="lede">The office you run your company from is refitted as the century turns: khaki when the Great War reaches the papers, prussian blue after the armistice, olive drab for the second war, phosphor green in the fifties. The Exchange’s chart changes with it, from a brass integrator to a pen on a cord, an oscilloscope’s beam, and at last the terminal’s red and green candles.</p>
+    <div class="era-tabs" role="tablist" aria-label="Eras">
+      <button role="tab" id="era-tab-1913" aria-controls="era-stage" aria-selected="true" data-era="0">1913</button>
+      <button role="tab" id="era-tab-1938" aria-controls="era-stage" aria-selected="false" data-era="1" tabindex="-1">1938</button>
+      <button role="tab" id="era-tab-1950" aria-controls="era-stage" aria-selected="false" data-era="2" tabindex="-1">1950</button>
+      <button role="tab" id="era-tab-1992" aria-controls="era-stage" aria-selected="false" data-era="3" tabindex="-1">1992</button>
+    </div>
+    <div class="era-stage" id="era-stage" role="tabpanel" aria-live="polite">
+      <img class="on" src="media/eras/exchange-1913.jpg" alt="The Exchange in 1913: Bethlehem Steel's year drawn by a brass rack, a steel drum and a ball-and-disc integrator, in a case of blackened iron and gilt." width="1000" height="862">
+      <img src="media/eras/exchange-1938.jpg" alt="The Exchange in 1938: Radio Corporation of America's price written by a pen clamped to a cord over two red pulleys, in an olive-drab case." loading="lazy" width="1000" height="862">
+      <img src="media/eras/exchange-1950.jpg" alt="The Exchange in 1950: Standard Oil of New Jersey as a green phosphor trace on an oscilloscope, with time-base and dollars-per-division knobs." loading="lazy" width="1000" height="862">
+      <img src="media/eras/exchange-1992.jpg" alt="The Exchange in 1992: Union Pacific as weekly red and green candles on a trading terminal, the last price tagged on the axis." loading="lazy" width="1000" height="862">
+    </div>
+    <p class="era-caption" id="era-caption"></p>
+  </section>
+
+  <!-- Every answer is true of the build today (docs/store/STORE-PAGE.md, "claim only what the build does"). No price
+       until the owner sets it in Steamworks; no date until Steam shows it. -->
+  <section class="questions" id="questions" aria-labelledby="questions-title">
+    <div class="kicker">Questions</div>
+    <h2 id="questions-title">Before you ask</h2>
+
+    <h3>What kind of game is it?</h3>
+    <p>An economic strategy game: grand strategy meets industrial tycoon. You found a company in January 1890 and run it through the panics, two world wars and the computer age, against the houses that ran the real century. If you play Victoria, Capitalism Lab or GearCity, it was made with you in mind.</p>
+
+    <h3>When does it come out?</h3>
+    <p>In Early Access on Steam, later in 2026. The Steam page opens first, and the day is set there. <a href="mailto:hello@primemoverindustries.com?subject=Tell%20me%20when%20Titans%20of%20Progress%20is%20on%20Steam">Write to us</a> and we will write back once, the day it opens.</p>
+
+    <h3>Is it historical?</h3>
+    <p>Yes. The century runs as it really ran: the real companies, inventors and bankers, the panics and the wars, reported in the paper as they happen. It turns only where your decisions turn it: whether to work with Mr. Tesla, how to vote in 1896, how to answer the government’s letter when the wars come.</p>
+
+    <h3>What does it run on?</h3>
+    <p>Windows 10 or 11, with a keyboard and mouse. It runs on a laptop’s integrated graphics with the map at reduced detail, and in full on a graphics card with 6 GB of its own memory. It needs no internet connection.</p>
+
+    <h3>Is there multiplayer, or mod support?</h3>
+    <p>Both, from the first day of Early Access.</p>
+
+    <h3>What do I get in Early Access?</h3>
+    <p>A complete campaign from 1890, for as long as you care to run the company. Updates through Early Access are free to everyone who owns the game.</p>
+
+    <h3>Who makes it?</h3>
+    <p>Prime Mover Industries, an independent studio of one. Press and creators: the <a href="/press/">press kit</a> has the facts, the screens and the films.</p>
+  </section>
+  </main>
+
   <footer>
     <span class="studio-name">Prime Mover Industries</span>
+    <nav aria-label="Footer"><a href="/press/">Press kit</a><a href="#questions">Questions</a><a href="mailto:hello@primemoverindustries.com">Contact</a></nav>
     An independent studio · <a href="mailto:hello@primemoverindustries.com">hello@primemoverindustries.com</a><br>
-    © 2026 Prime Mover Industries. Titans of Progress is in development; footage and screens are from the current build.
+    © 2026 Prime Mover Industries. Titans of Progress is in development; footage and screens are in-game, from builds of September and October 2026.
   </footer>
 </div>
 <script>
