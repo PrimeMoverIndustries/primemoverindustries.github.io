@@ -85,18 +85,20 @@
   .games { margin: 72px 0 0; }
   .games > h2 { font-family: var(--serif); color: var(--gold-hi); font-size: clamp(28px, 4vw, 36px); margin: 8px 0 0; text-align: center; }
   .games > .kicker { text-align: center; }
-  .game { display: grid; grid-template-columns: 7fr 5fr; gap: 0; margin: 32px 0 0; background: var(--edge);
+  .game { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 32px 0 0; background: var(--edge);
     border: 1px solid var(--gold); border-radius: 4px; overflow: hidden; box-shadow: 0 24px 60px #000a; }
-  .game figure { margin: 0; min-width: 0; position: relative; min-height: 300px; }
-  .game figure img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%; }
-  .game .about { padding: 30px 30px 28px; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+  .titans { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; padding: 22px; min-width: 0; background: #0b0a09; }
+  .titans figure { margin: 0; min-width: 0; }
+  .titans .frame { padding: 4px; border: 1px solid var(--gold); border-radius: 2px; box-shadow: 0 0 0 3px #0b0a09, 0 0 0 4px #c9a86955; background: var(--edge); }
+  .titans img { display: block; width: 100%; height: auto; aspect-ratio: 1; border-radius: 1px; }
+  .titans figcaption { font-family: var(--serif); color: var(--gold-hi); font-size: 16px; margin: 9px 0 0; line-height: 1.2; }
+  .titans figcaption span { display: block; font-family: var(--mono); font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom: 2px; }
+  .game .about { padding: 30px 30px 28px; display: flex; flex-direction: column; justify-content: center; gap: 12px; min-width: 0; }
   .game h3 { font-family: var(--serif); color: var(--gold-hi); font-size: 34px; line-height: 1.1; margin: 0; }
   .game .tagline { font-family: var(--serif); font-size: 19px; margin: 0; }
   .game p { margin: 0; }
   .game .status { font-family: var(--mono); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft); }
-  .faces { display: flex; gap: 8px; margin: 4px 0 0; }
-  .faces img { width: 52px; height: 52px; border: 1px solid #c9a86988; border-radius: 2px; display: block; }
-  .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: auto; padding-top: 8px; }
+  .actions { display: flex; gap: 12px; flex-wrap: wrap; padding-top: 10px; }
   .button { display: inline-block; padding: 11px 22px; border-radius: 3px; text-decoration: none; font-family: var(--serif); font-size: 17px; border: 1px solid var(--gold); }
   .button.primary { background: var(--wax); border-color: var(--wax-hi); color: var(--ink); }
   .button.primary:hover, .button.primary:focus-visible { background: var(--wax-hi); }
@@ -112,7 +114,7 @@
 
   @media (max-width: 820px) {
     .game { grid-template-columns: 1fr; }
-    .game figure { min-height: 0; aspect-ratio: 16 / 9; }
+    .titans { padding: 16px; gap: 12px; }
     .game .about { padding: 22px 20px 22px; }
     .game h3 { font-size: 28px; }
   }
@@ -146,18 +148,17 @@
     <h2 id="games-title">Now in the works</h2>
 
     <article class="game">
-      <figure><img src="/media/field-trial-poster.jpg" alt="A field trial at the proving ground, January 1890: the incandescent lamp lit on the bench." width="1600" height="900"></figure>
+      <div class="titans">
+        <figure><div class="frame"><img src="/media/titans/thomas_edison_neutral.jpg" alt="Portrait of Thomas Edison" width="360" height="360"></div><figcaption><span>The Wizard of Menlo Park</span>Thomas Edison</figcaption></figure>
+        <figure><div class="frame"><img src="/media/titans/nikola_tesla_neutral.jpg" alt="Portrait of Nikola Tesla" width="360" height="360"></div><figcaption><span>The Inventor</span>Nikola Tesla</figcaption></figure>
+        <figure><div class="frame"><img src="/media/titans/george_westinghouse_neutral.jpg" alt="Portrait of George Westinghouse" width="360" height="360"></div><figcaption><span>The Engineer</span>George Westinghouse</figcaption></figure>
+        <figure><div class="frame"><img src="/media/titans/jp_morgan_neutral.jpg" alt="Portrait of J. P. Morgan" width="360" height="360"></div><figcaption><span>The Banker</span>J. P. Morgan</figcaption></figure>
+      </div>
       <div class="about">
         <div class="kicker">A grand strategy of American industry</div>
         <h3>Titans of Progress</h3>
         <p class="tagline">New York, January 1890. Five million dollars, and nobody on the payroll.</p>
         <p>Grand strategy meets industrial tycoon. Found an electrical company and invent, build, trade and litigate your way through the century against the titans who ran it.</p>
-        <div class="faces" aria-hidden="true">
-          <img src="/media/titans/thomas_edison_neutral.jpg" alt="" width="52" height="52" loading="lazy">
-          <img src="/media/titans/nikola_tesla_neutral.jpg" alt="" width="52" height="52" loading="lazy">
-          <img src="/media/titans/george_westinghouse_neutral.jpg" alt="" width="52" height="52" loading="lazy">
-          <img src="/media/titans/jp_morgan_neutral.jpg" alt="" width="52" height="52" loading="lazy">
-        </div>
         <p class="status">Coming soon to Steam Early Access · Windows</p>
         <div class="actions">
           <a class="button primary" href="/titans-of-progress/">See the game</a>
@@ -180,5 +181,13 @@
     © 2026 Prime Mover Industries · <a href="https://titansofprogress.com/">titansofprogress.com</a>
   </footer>
 </div>
+<script>
+  document.querySelectorAll('.titans img').forEach(img => {
+    const calm = img.src, pleased = calm.replace('_neutral', '_pleased');
+    img.addEventListener('mouseenter', () => { img.src = pleased; });
+    img.addEventListener('mouseleave', () => { img.src = calm; });
+    (window.requestIdleCallback || setTimeout)(() => { new Image().src = pleased; });
+  });
+</script>
 </body>
 </html>
